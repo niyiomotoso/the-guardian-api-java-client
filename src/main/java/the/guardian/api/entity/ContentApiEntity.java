@@ -210,7 +210,7 @@ public abstract class ContentApiEntity extends PageAndReferenceApiEntity {
         return this;
     }
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         this.appendToBaseUrl("tag", this.tag)
                 .appendToBaseUrl("rights", this.rights)
                 .appendToBaseUrl("ids", this.ids).
@@ -234,6 +234,8 @@ public abstract class ContentApiEntity extends PageAndReferenceApiEntity {
                 .appendToBaseUrl("reference", this.getReference())
                 .appendToBaseUrl("reference-type", this.getReferenceType())
                 .appendToBaseUrl("show-references", this.getShowReferences());
+
+        return this.baseUrl;
     }
 
     public ContentApiEntity(String _apiUrl) {

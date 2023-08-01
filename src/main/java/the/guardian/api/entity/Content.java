@@ -45,10 +45,12 @@ public class Content extends ContentApiEntity {
         return this;
     }
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         super.buildUrl();
         this.appendToBaseUrl("q", this.getQuery())
                 .appendToBaseUrl("query-fields", this.getQueryFields());
+
+        return this.baseUrl;
     }
     
     public AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException {

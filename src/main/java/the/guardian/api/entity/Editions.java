@@ -29,8 +29,10 @@ public class Editions extends ApiEntity {
         return this.query;
     }
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         this.appendToBaseUrl("q", this.getQuery());
+
+        return this.baseUrl;
     }
     
     public AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException {

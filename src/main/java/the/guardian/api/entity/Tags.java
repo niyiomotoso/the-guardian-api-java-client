@@ -51,7 +51,7 @@ public class Tags extends PageAndReferenceApiEntity {
         return this;
     }
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         this.appendToBaseUrl("page", String.valueOf(this.getPage()))
                 .appendToBaseUrl("page-size", String.valueOf(this.getPageSize()))
                 .appendToBaseUrl("q", this.getQuery())
@@ -61,6 +61,8 @@ public class Tags extends PageAndReferenceApiEntity {
                 .appendToBaseUrl("reference", this.getReference())
                 .appendToBaseUrl("reference-type", this.getReferenceType())
                 .appendToBaseUrl("show-references", this.getShowReferences());
+
+        return this.baseUrl;
     }
 
     public AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException {
