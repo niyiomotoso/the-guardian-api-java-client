@@ -27,8 +27,10 @@ public class Sections extends ApiEntity {
     }
 
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         this.appendToBaseUrl("q", this.getQuery());
+
+        return this.baseUrl;
     }
     
     public AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException {

@@ -50,7 +50,7 @@ public abstract class ApiEntity {
         return this;
     }
 
-    public abstract void buildUrl() throws UnsupportedEncodingException;
+    public abstract String buildUrl() throws UnsupportedEncodingException;
 
     
     public abstract AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException;

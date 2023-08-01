@@ -99,10 +99,12 @@ public class SingleItem extends ContentApiEntity {
         return this;
     }
 
-    public void buildUrl() throws UnsupportedEncodingException {
+    public String buildUrl() throws UnsupportedEncodingException {
         this.setBaseUrl(this.getBaseUrl() + this.id + "?api-key=" + this.apiKey);
         super.buildUrl();
         this.appendToBaseUrl("show-story-package", this.showStoryPackage).appendToBaseUrl("show-editors-picks", this.showEditorsPicks).appendToBaseUrl("show-most-viewed", this.showMostViewed).appendToBaseUrl("show-related", this.showRelated);
+
+        return this.baseUrl;
     }
     
     public AbstractResponse fetch() throws UnsupportedEncodingException, UnirestException {
