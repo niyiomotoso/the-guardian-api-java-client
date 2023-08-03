@@ -3,12 +3,24 @@ package the.guardian.api.client;
 import the.guardian.api.config.UrlMap;
 import the.guardian.api.entity.*;
 
-/**
- *
- */
 public class GuardianApi{
     private String apiKey;
 
+    public GuardianApi(String _apiKey) {
+        validateApiKey(_apiKey);
+        this.apiKey = _apiKey;
+    }
+
+    /**
+     * make sure the api key is valid
+     */
+    private String validateApiKey(String apiKey) {
+        if (apiKey.length() < 4) {
+            throw new IllegalArgumentException("API key "+ apiKey +" is too short, and thus invalid.");
+        }
+
+        return apiKey;
+    }
     
     public Content content() {
         String apiUrl =  new UrlMap().CONTENT + "?api-key=" + this.apiKey;
@@ -36,13 +48,6 @@ public class GuardianApi{
     
     public SingleItem singleItem() {
         String apiUrl =  new UrlMap().BASE;
-        String var10003 = this.apiKey;
-
-        return new SingleItem(apiUrl, var10003);
-    }
-
-    public GuardianApi(String _apiKey) {
-        super();
-        this.apiKey = _apiKey;
+        return new SingleItem(apiUrl, this.apiKey);
     }
 }
