@@ -1,12 +1,8 @@
 package the.guardian.api.client;
 
-import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import the.guardian.api.entity.*;
-import the.guardian.api.http.content.ContentResponse;
-
-import java.io.UnsupportedEncodingException;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
