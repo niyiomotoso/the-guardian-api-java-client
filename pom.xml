@@ -9,12 +9,12 @@
 
   <name>the-guardian-api-java-client</name>
   <url>https://github.com/niyiomotoso/the-guardian-api-java-client</url>
-  <description>Java client library for the Guardian APIs. All available API modules are supported - Content, Tags, Sections, Editions, and Single Item.
+  <description>Java client library for The Guardian Open Platform API. All available API modules are supported - Content, Tags, Sections, Editions, and Single Item.
     Sign up for an API key on The Guardian Open Platform.
   </description>
 
   <organization>
-    <name>open-platform.theguardian.com/</name>
+    <name>open-platform.theguardian.com</name>
     <url>https://open-platform.theguardian.com/</url>
   </organization>
 
