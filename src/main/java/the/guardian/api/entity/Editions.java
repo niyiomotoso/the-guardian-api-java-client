@@ -5,6 +5,7 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import com.mashape.unirest.request.GetRequest;
 import the.guardian.api.http.AbstractResponse;
+import the.guardian.api.http.editions.EditionsResponse;
 import the.guardian.api.http.editions.EditionsResponseWrapper;
 
 import java.io.UnsupportedEncodingException;
