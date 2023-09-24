@@ -3,6 +3,15 @@
 Java client library for the Guardian APIs. See documentation [here](https://open-platform.theguardian.com/documentation/).
 All available API modules are supported - Content, Tags, Sections, Editions, and Single Item.
 
+### Installation
+It is installable with any of the jvm package managers such as Gradle, Maven, sbt e.t.c.
+
+Example gradle command:
+
+```java
+implementation 'io.github.niyiomotoso:the-guardian-api-java-client:1.1.0'
+```
+
 ### Get API key
 
 Sign up for an API key [here](https://open-platform.theguardian.com/access)
