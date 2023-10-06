@@ -53,3 +53,6 @@ EditionsResponse response = this.guardianApi.editions().setQuery("uk").fetch();
 ```java
 SingleItemResponse response = this.guardianApi.singleItem().setId("/sport/2022/oct/07/cricket-jos-buttler-primed-for-england-comeback-while-phil-salt-stays-focused").setShowStoryPackage(true).setShowEditorsPicks(true).setShowMostViewed(true).setShowRelated(true).fetch();
 ```
+
+### Community support
+You can reach out to us on the Google Group here https://groups.google.com/g/guardian-api-talk for support 
